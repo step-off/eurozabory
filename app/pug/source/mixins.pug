@@ -1,0 +1,27 @@
+//- svg sprite mixin
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="#icon-" + name)
+
+mixin link(path)
+	link(rel="stylesheet", href=path+".css")
+
+mixin script(path)
+	script(src=path)
+
+mixin body()
+	body
+		.body-wrapper
+			block content
+				header.header
+				main
+				footer.footer
+		block scripts
+			+script("libs/jquery-2.2.1.min.js")
+			+script("libs/slick.min.js")
+			+script("js/common.js")
+			
+
+
+

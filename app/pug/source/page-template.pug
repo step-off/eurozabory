@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+html(lang="ru")
+	include mixins
+	head
+		block head_scripts
+		block meta
+			meta(charset="UTF-8")
+			meta(name="viewport" content="width=device-width, initial-scale=1")
+		block styles
+			+link("css/style")
+		block title
+			title Title
+	block body
+		+body("index")
