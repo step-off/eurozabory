@@ -53,11 +53,15 @@ var gulp         = require('gulp'),
 });*/
 //Перезагрузка после изменения  .jade
 //gulp.task('jade-watch', ['jade'], browserSync.reload);
-browserSync.init({
+gulp.task("bs", function(){
+  browserSync.init({
     server: {
         baseDir: 'app'
-    }
+    },
+    ui: false
 });
+});
+
 
 gulp.task('pug', function() {
   return gulp.src('app/pug/*.pug')
@@ -139,13 +143,13 @@ gulp.task('svgsprite', function () {
           }
       }))
       // remove all fill and style declarations in out shapes
-      .pipe(cheerio({
+      /*.pipe(cheerio({
           run: function ($) {
               $('[fill]').removeAttr('fill');
               $('[style]').removeAttr('style');
           },
           parserOptions: { xmlMode: true }
-      }))
+      }))*/
       // cheerio plugin create unnecessary string '>', so replace it.
       .pipe(replace('&gt;', '>'))
       // build svg sprite
@@ -161,16 +165,17 @@ gulp.task('svgsprite', function () {
       .pipe(gulp.dest("app/img"));
 });
 
-gulp.task('watch', ['imgmin', 'jsminify', 'pug', 'less', 'babel-js'], function() {
+gulp.task('watch', ['imgmin', "bs", 'jsminify', 'pug', 'less', 'babel-js'], function() {
     gulp.watch('app/**/*.less', ['less']);
     gulp.watch('app/js/es6/common.js', ['babel-js']);
     //gulp.watch('app/**/*.pug', ['pug-watch']);
     gulp.watch('app/**/*.pug', ['pug']);
    // gulp.watch('app/*.html').on('change', browserSync.reload);
     //gulp.watch('app/js/**/*.js').on('change', browserSync.reload); 
+    browserSync.watch('app/*.html').on('change', browserSync.reload);
+  browserSync.watch('app/js/**/*.js').on('change', browserSync.reload);
 });
 
-browserSync.watch('app/*.html').on('change', browserSync.reload);
-browserSync.watch('app/js/**/*.js').on('change', browserSync.reload);
+
 
 gulp.task('default', ['watch']);

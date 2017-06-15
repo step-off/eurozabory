@@ -61,5 +61,31 @@ catalogue.on("click", (e) => {
 	e.preventDefault();
 	const popup = $(".page-header__menu-popup");
 	popup.toggleClass("page-header__menu-popup_visible");
+});
+
+const slider = $(".banner__slider");
+slider.slick({
+	arrows: true,
+	dots: true
+});
+
+const callbackBtn = $(".page-header__callback-btn");
+const callbackPopUp = $(".callback-popup");
+const closePopUpBtn = $(".callback-popup__close-btn");
+callbackBtn.on("click", function(e){
+	e.preventDefault();
+	callbackPopUp.show();
+	$("body").css("overflowY", "hidden");
+});
+
+closePopUpBtn.on("click", function(){
+	callbackPopUp.hide();
+	$("body").css("overflowY", "visible");
+});
+
+const mobileMenuCloseBtn = $(".mobile-menu__close-btn");
+const mobileMenu = $(".page-header__menu-navigation");
+mobileMenuCloseBtn.on("click", () => {
+	mobileMenu.hide();
 })
 

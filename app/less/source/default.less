@@ -30,7 +30,8 @@ a {
 	font: inherit;
 }
 
-button, input {
+button, input,
+textarea {
 	border: none;
 	ourline: none;
 	&:focus,
@@ -41,4 +42,16 @@ button, input {
 
 .fa {
 	 font-family: 'FontAwesome';
+}
+
+.slick-slide {
+	outline: none !important;
+}
+
+.mobile {
+	display: none !important;
+	@media screen and (max-width: 767px) {
+		display: block !important;
+	}
+
 }

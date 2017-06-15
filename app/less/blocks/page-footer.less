@@ -1,0 +1,190 @@
+.page-footer {
+	padding-top: 80px;
+	padding-bottom: 70px;
+	background-color: #000;
+	&__wrapper {
+		.wrapper();
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__socials {
+		width: 25.6%;
+		&-icons {
+			margin-bottom: 80px;
+			&-title {
+				font-size: 13px;
+				line-height: 18px;
+				color: #fff;
+				margin-bottom: 15px;
+			}
+			&-group {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			&-item {
+				display: block;
+				margin-right: 10px;
+				width: 45px;
+				height: 45px;
+				border: 1px solid #3c2a30;
+				border-radius: 50%;
+				text-align: center;
+				span.fa {
+					line-height: 45px;
+					color: #fff;
+					vertical-align: middle;
+					display: inline;
+				}
+				&:hover {
+					border-color: transparent;
+					background-color: #fff;
+					span.fa-vk {
+						color: #4c75a3;
+					}
+					span.fa-facebook {
+						color: #49659f;
+					}
+					span.fa-instagram {
+						color: #ce3584;
+					}
+				}
+			}
+		}
+	}
+	&__rights {
+		margin-bottom: 20px;
+		p {
+			font-size: 13px;
+			line-height: 18px;
+			color: #fff;
+		}
+	}
+	&__developer {
+		a {
+			font-size: 13px;
+			line-height: 18px;
+			color: #42363a;
+		}
+	}
+	&__menu {
+		width: 59%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: auto;
+		&-title {
+			font-family: "RubikMedium",sans-serif;
+			font-size: 16px;
+			line-height: 30px;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		&-company {
+			width: 25.94%;
+			margin-right: 20px;
+			&-item a {
+				font-size: 13px;
+				line-height: 24px;
+				color: #c1c1c1;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+		&-products {
+			width: 25.94%;
+			margin-right: 20px;
+			&-item a {
+				font-size: 13px;
+				line-height: 24px;
+				color: #c1c1c1;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+		&-info {
+			width: 25.94%;
+			margin-right: 20px;
+			&-item a {
+				font-size: 13px;
+				line-height: 24px;
+				color: #c1c1c1;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	&__contacts {
+		width: 15.37%;
+		&-phone {
+			margin-bottom: 16px;
+			p {
+				font-size: 13px;
+				line-height: 18px;
+				color: #fff;
+			}
+			a {
+				font-family: "RubikBold", sans-serif;
+				color: #fff;
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+		&-mail {
+			font-size: 13px;
+			line-height: 18px;
+			color: @yellow;
+			text-decoration: underline;
+			margin-bottom: 20px;
+			display: block;
+			&:hover {
+				color: @yellow-light;
+			}
+		}
+		&-adress {
+			font-size: 13px;
+			line-height: 18px;
+			color: #fff;
+			margin-bottom: 75px;
+		}
+		&-print-link {
+			font-family: "Open Sans", sans-serif;
+			font-size: 13px;
+			line-height: 30px;
+			color: #8e8e8e;
+			svg {
+				width: 18px;
+				height: 18px;
+				vertical-align: middle;
+				margin-right: 11px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.page-footer {
+		&__wrapper {
+			justify-content: flex-start;
+		}
+		&__socials {
+			order: 2;
+			width: 35%;
+		}
+		&__menu {
+			order: 1;
+			width: 100%;
+			justify-content: space-between;
+			margin-bottom: 25px;
+		}
+		&__contacts {
+			order: 3;
+			width: 35%;
+			&-print-link {
+				display: none;
+			}
+		}
+	}
+}

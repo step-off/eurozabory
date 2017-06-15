@@ -3,8 +3,10 @@
 	margin: 0 auto;
 	padding: 0 15px;
 	@media screen and (max-width: 1279px) {
-		width: 87.5%;
+		width: 92.5%;
 		max-width: 900px;
+		padding-right: 0;
+		padding-left: 0;
 	}
 	@media screen and (max-width: 767px) {
 		max-width: 500px;
@@ -17,4 +19,15 @@
 	font-weight: 500;
 	line-height: 42px;
 	text-transform: uppercase;
+	text-align: center;
+	padding: 25px 0;
+	font-family: "RubikMedium", sans-serif;
+}
+
+.clear() {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
 }

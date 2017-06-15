@@ -21,6 +21,19 @@ mixin body()
 			+script("libs/jquery-2.2.1.min.js")
 			+script("libs/slick.min.js")
 			+script("js/common.js")
+
+mixin catalogue_item(img,desc)
+	li.catalogue-main__item(style="background-image: url(../img/" + img + ".jpg)")
+		a(href="#").catalogue-main__link
+		span.catalogue-main__item-desc #{desc}
+		span.catalogue-main__item-more Подробнее
+
+mixin barriers_item(img,label,desc)
+	li.barriers-main__item(style="background-image: url(../img/" + img + ".jpg)")
+		a(href="#").barriers-main__item-link
+			span.barriers-main__item-label #{label}
+			span.barriers-main__item-desc #{desc}
+		
 			
 
 
