@@ -66,7 +66,15 @@ catalogue.on("click", (e) => {
 const slider = $(".banner__slider");
 slider.slick({
 	arrows: true,
-	dots: true
+	dots: true,
+	responsive: [
+		{
+			breakpoint: 767,
+			settings: {
+				arrows: false
+			}
+		}
+	]
 });
 
 const callbackBtn = $(".page-header__callback-btn");
@@ -84,8 +92,20 @@ closePopUpBtn.on("click", function(){
 });
 
 const mobileMenuCloseBtn = $(".mobile-menu__close-btn");
+const burgerBtn = $(".page-header__burger-btn");
 const mobileMenu = $(".page-header__menu-navigation");
 mobileMenuCloseBtn.on("click", () => {
 	mobileMenu.hide();
+});
+burgerBtn.on("click", () => {
+	mobileMenu.show();
+});
+
+$(window).on("resize", function(e){
+	if(window.innerWidth > 767)
+		mobileMenu.css("display", "block");
+	else
+		mobileMenu.css("display", "none");
+		 
 })
 

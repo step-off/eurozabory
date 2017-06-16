@@ -235,14 +235,17 @@
 
 @media screen and (max-width: 767px)  {
 	.page-header {
+		position: relative;
 		&__menu {
 			position: static;
+			
 			&-navigation {
+				display: none;
 				position: absolute;
 				left: 0;
 				top: 0;
 				width: 100%;
-				height: 100%;
+				height: 100vh;
 				z-index: 2000;
 				background-color: #1a1114;
 				padding-top: 15px;
@@ -256,7 +259,7 @@
 					margin-bottom: 25px;
 				}
 				&-wrapper {
-					width: 87.5%;
+					width: 92.5%;
 					max-width: 500px;
 					display: flex;
 					flex-direction: column;
@@ -276,11 +279,79 @@
 					}
 				}
 			}
+			&-catalogue {
+				width: 100%;
+				&-link {
+					display: block;
+					position: relative;
+					padding-bottom: 20px;
+					&::after {
+						content: '\f0dd';
+						font-family: "FontAwesome";
+						display: inline-block;
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+			&-popup {
+				top: 167px;
+				bottom: inherit;
+				transform: translateY(0);
+				//bottom: initial;
+				height: auto;
+				&-list {
+					flex-direction: column;
+					padding-top: 30px;
+					padding-bottom: 30px;
+				}
+				&-link {
+					line-height: 36px;
+				}
+			}
+		}
+		&__logo {
+			width: 70%;
+			&-text {
+				font-size: 20px;
+			}
+			&-subtext {
+				font-size: 12px;
+			}
+		}
+		&__call-btn {
+			display: inline-block;
+			padding: 5px 0;
+			span.fa {
+				font-size: 24px;
+			}
+		}
+		&__burger-btn {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+			background-color: #fff;
+			cursor: pointer;
+			position: relative;
+			&:before {
+				position: absolute;
+				content: '';
+				display: block;
+				left: 0px;
+				top: 0;
+				height: 3px;
+				width: 100%;
+				background-color: #000;
+				box-shadow: 0 0.5em 0 0 #000,
+										0 1em 0 0 #000;
+			}
 		}
 		.mobile-menu__close-btn {
 			position: absolute;
-			right: 0;
-			top: 15px;
+			right: -5px;
+			top: 10px;
 			width: 35px;
 			height: 35px;
 			text-align: center;

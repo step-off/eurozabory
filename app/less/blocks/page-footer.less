@@ -188,3 +188,35 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.page-footer {
+		padding-top: 50px;
+		padding-bottom: 30px;
+		&__menu {
+			&-products,
+			&-company,
+			&-info {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+		&__socials,
+		&__contacts {
+			width: 100%;
+		}
+		&__socials {
+			order: 3;
+			&-icons {
+				margin-bottom: 50px;
+			}
+		}
+		&__contacts {
+			order: 2;
+			margin-bottom: 30px;
+			&-adress {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

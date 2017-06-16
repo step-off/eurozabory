@@ -6,7 +6,7 @@
 	height: 100%;
 	left: 0;
 	top: 0;
-	z-index: 1000;
+	z-index: 5000;
 
 	&__header {
 		.header();
@@ -81,5 +81,22 @@
 		font-size: 14px;
 		font-family: "RubikMedium", sans-serif;
 		cursor: pointer;
+	}
+}
+
+@media screen and (max-width: 767px)  {
+	.callback-popup {
+		&__form {
+			&-wrapper {
+		    max-width: 380px;
+		    width: 87.5%;
+			}
+		}
+		&__close-btn {
+			right: -15px;
+		}
+		&__input {
+			width: 90%;
+		}
 	}
 }

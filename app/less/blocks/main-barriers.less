@@ -86,3 +86,26 @@
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+	.barriers-main {
+		&__item {
+			max-width: none;
+			width: 100%;
+			float: none;
+
+			&:nth-child(2n) {
+				float: none;
+			}
+			&-link {
+				min-height: 71px;
+				bottom: 18px;
+				height: auto;
+				width: 87%;
+				left: 50%;
+				transform: translateX(-50%);
+				padding-bottom: 16px;
+			}
+		}
+	}
+}

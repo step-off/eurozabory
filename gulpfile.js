@@ -102,16 +102,15 @@ gulp.task('jsminify', function() {
     return gulp.src('app/js/common.js') 
         .pipe(uglify()) 
         .pipe(rename({suffix: '.min'})) 
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('docs/js'));
 });
 
 gulp.task('libminify', function() {
-    return gulp.src(['app/libs/jquery.min.js',
-      'app/libs/jquery.magnific-popup.min.js',
-      'app/libs/component.selectfx.js']) 
+    return gulp.src(['app/libs/jquery-2.2.1.min.js',
+      'app/libs/slick.min.js']) 
         .pipe(concat('libs.min.js')) 
         .pipe(uglify()) 
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('docs/js'));
 });
 
 gulp.task('imgmin', function() { 
