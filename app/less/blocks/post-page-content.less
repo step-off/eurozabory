@@ -1,0 +1,49 @@
+.post-page-content {
+	margin-top: 54px;
+	margin-bottom: 100px;
+	h2 {
+		font-size: 24px;
+		line-height: 42px;
+		font-family: "RubikMedium", sans-serif;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&__wrapper {
+		.wrapper();
+		p {
+			font-size: 13px;
+			line-height: 21px;
+			padding-top: 26px;
+			padding-bottom: 38px;
+		}
+	}
+	&__link {
+		font-family: "RubikMedium", sans-serif;
+		font-size: 14px;
+		line-height: 27px;
+		color: @yellow;
+		text-decoration: underline;
+	}
+}
+
+@media screen and (max-width: 767px) {
+		.post-page-content {
+			h2 {
+				font-size: 21px;
+				line-height: 32px;
+			}
+			&__wrapper {
+				p {
+					max-height: 490px;
+					overflow: hidden;
+				}
+			}
+			&__link {
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				margin-top: 20px;
+				text-align: center;
+			}
+		}
+	}

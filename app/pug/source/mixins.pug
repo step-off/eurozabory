@@ -18,9 +18,9 @@ mixin body()
 				main
 				footer.footer
 		block scripts
-			//- +script("libs/jquery-2.2.1.min.js")
-			//- +script("libs/slick.min.js")
-			+script("js/libs.min.js")
+			+script("libs/jquery-2.2.1.min.js")
+			+script("libs/slick.min.js")
+			//- +script("js/libs.min.js")
 			+script("js/common.js")
 
 mixin catalogue_item(img,desc)
@@ -35,6 +35,17 @@ mixin barriers_item(img,label,desc)
 			span.barriers-main__item-label #{label}
 			span.barriers-main__item-desc #{desc}
 		
+mixin breadcrumbs(text)
+	a(href="#").breadcrumbs__link.desktop #{text}
+
+
+mixin blogItem()
+	li.blog-page__item
+				a(href="#").blog-page__link
+				.blog-page__item-wrapper
+					h3.blog-page__item-header Как правильно выбрать забор?
+					p.blog-page__item-text Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение дальнейших направлений развития нашей деятельности позволяет оценить значение дальнейших направлений развития
+					a(href="#").blog-page__item-link Читать далее
 			
 
 
