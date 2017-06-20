@@ -1,0 +1,16 @@
+extends source/page-template
+
+block title
+	title Item-card
+block content
+	include components/callback-popup
+	include item-card/page-header
+	main(class="item-card-main")
+		include components/breadcrumbs
+			block breadcrumbs
+				+breadcrumbs("Главная")
+				+breadcrumbs("Каталог продукции")
+				+breadcrumbs("Ворота и калитки")
+				+breadcrumbs("Калитки капитальные (тип 701) для кованных ограждений")
+		include item-card/content
+	include item-card/page-footer

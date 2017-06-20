@@ -107,7 +107,10 @@ gulp.task('jsminify', function() {
 
 gulp.task('libminify', function() {
     return gulp.src(['app/libs/jquery-2.2.1.min.js',
-      'app/libs/slick.min.js']) 
+                      'app/libs/slick.min.js',
+                      'app/libs/jquery-ui.min.js',
+                      'app/libs/jquery.magnific-popup.min.js'
+                    ]) 
         .pipe(concat('libs.min.js')) 
         .pipe(uglify()) 
         .pipe(gulp.dest('docs/js'));

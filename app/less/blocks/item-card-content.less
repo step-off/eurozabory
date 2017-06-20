@@ -1,0 +1,159 @@
+.item-card {
+	padding-top: 35px;
+	&__wrapper {
+		.wrapper();
+	}
+	&__desc {
+		.clear();
+		h2 {
+			.header();
+			text-align: left;
+			width: 100%;
+		}
+	}
+	&__gallery {
+		width: 50.85%;
+		padding-right: 20px;
+		float: left;
+		.clear();
+	}
+	&__main-photo {
+		width: 478px;
+		float: left;
+		img {
+			width: 100%;
+			height: auto;
+			cursor: pointer;
+		}
+	}
+	&__small-photos {
+		width: 81px;
+		float: right;
+		img {
+			width: 100%;
+			height: auto;
+			cursor: pointer;
+			margin-bottom: 15px;
+		}
+	}
+	&__photo {
+		&_active {
+			outline: 5px solid rgba(255,255,255,.7);
+			outline-offset: -5px;
+		}
+	}
+	&__details {
+		width: 42.31%;
+		float: right;
+		padding-top: 20px;
+		&-size {
+			h3 {
+				font-family: "RubikBold",sans-serif;
+				font-size: 16px;
+				line-height: 27px;
+			}
+			p {
+				color: #8e8e8e;
+				font-size: 13px;
+				line-height: 21px;
+				span {
+					position: relative;
+					padding-right: 18px;
+					&:first-child {
+						margin-left: 30px;
+					}
+					&:not(:last-child) {
+						margin-right: 8px;
+						&::after {
+						content: "/";
+						position: absolute;
+						right: 0;
+					}
+					}
+					
+				}
+			}
+		}
+		&-accordion {
+			margin-bottom: 25px;
+			h3 {
+				font-family: "RubikBold", sans-serif;
+				font-size: 16px;
+				line-height: 27px;
+				border-top: 1px solid #e6e6e6;
+				padding: 16px 0;
+				position: relative;
+				cursor: pointer;
+				&:last-of-type {
+					border-bottom: 1px solid #e6e6e6;
+				}
+				&:after {
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					content: "\f067";
+					font-family: "FontAwesome";
+					color: @yellow;
+				}
+			}
+			h3.ui-accordion-header-active {
+				&:last-of-type {
+					border-bottom: none;
+				}
+				&:after {
+					content: "\f068";
+				}
+			}
+			p {
+				font-size: 13px;
+				line-height: 21px;
+				color: #595959;
+				padding-bottom: 16px;
+			}
+		}
+	}
+	&__order-btn {
+		width: 170px;
+		height: 45px;
+		background-color: @green;
+		border-radius: 23px;
+		display: block;
+		font-family: "RubikMedium",sans-serif;
+		text-align: center;
+		line-height: 45px;
+		color: #fff;
+		margin-top: 28px;
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 1279px) {
+
+	.item-card {
+		&__gallery {
+			width: 100%;
+			padding-right: 0;
+		}
+		&__details {
+			width: 100%;
+		}
+		&__main-photo {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		&__small-photos {
+			width: 100%;
+			img {
+				margin-bottom: 0;
+				width: 30%;
+				height: auto;
+				&:not(:nth-child(3n)){
+					margin-right: 5%;
+					}
+			}
+		}
+	}
+	
+}

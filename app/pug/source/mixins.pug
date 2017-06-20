@@ -20,6 +20,8 @@ mixin body()
 		block scripts
 			+script("libs/jquery-2.2.1.min.js")
 			+script("libs/slick.min.js")
+			+script("libs/jquery-ui.min.js")
+			+script("libs/jquery.magnific-popup.min.js")
 			//- +script("js/libs.min.js")
 			+script("js/common.js")
 
@@ -46,6 +48,15 @@ mixin blogItem()
 					h3.blog-page__item-header Как правильно выбрать забор?
 					p.blog-page__item-text Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение дальнейших направлений развития нашей деятельности позволяет оценить значение дальнейших направлений развития
 					a(href="#").blog-page__item-link Читать далее
+
+mixin recentItem(text)
+	li.recent-viewed__item
+		a.recent-viewed__link(href="#")
+		figure.recent-viewed__figure
+			img(src="img/recent.jpg", alt="")
+			figcaption.recent-viewed__caption
+				p #{text}
+
 			
 
 
