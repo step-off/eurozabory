@@ -1,11 +1,5 @@
 section.barriers-main
 	h2 готовые решения ограждений
 	.barriers-main__wrapper 
-		ul.barriers-main__list
-			+barriers_item("construction_barrier", "Фото", "Забор для стройки")
-			+barriers_item("court_barrier", "Статья", "Ограждения  спортивной площадки")
-			+barriers_item("children_barrier", "Продукция", "Ограждения  детской площадки")
-			+barriers_item("construction_barrier2", "Статья", "Ограждения стройки")
-			+barriers_item("netlike_barrier", "Продукция", "Сетчатые ограждения")
-			+barriers_item("road_barrier", "Фото", "Дорожные ограждения")
-		a(href="#").barriers-main__link Смотреть больше
+		include ../components/barriers
+		

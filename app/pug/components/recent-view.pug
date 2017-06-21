@@ -1,9 +1,7 @@
 .recent-viewed
-	h2 Недавно просмотренные
+	block recentHeader
 	.recent-viewed__wrapper
 		ul.recent-viewed__list
-			+recentItem("Калитка кованная главзабор")
-			+recentItem("Калитки капитальные (тип 701) для кованных ограждений")
-			+recentItem("Калитки капитальные (тип 711) для кованных ограждений")
-			+recentItem("Калитки капитальные (тип 721) для кованных ограждений")
+			block recentItems
+				
 

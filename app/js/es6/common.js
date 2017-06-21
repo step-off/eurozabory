@@ -111,7 +111,9 @@ $(document).ready( () => {
 	});
 	const accordionWrapper = $("[data-accordion]");
 	accordionWrapper.accordion({
-	  collapsible: true
+	  collapsible: true,
+	  heightStyle: "content",
+	  active: 0
 	});
 
 
@@ -210,7 +212,7 @@ Gallery.prototype._toggleMainImage = function() {
 		this._createSources();
 		this._toggleSmallImage();
 		//this._toggleMainImage();
-		this._offEventsOnMobiles();
+		//this._offEventsOnMobiles();
 		
 	};
 	new Gallery(

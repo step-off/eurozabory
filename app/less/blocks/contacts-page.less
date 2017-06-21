@@ -1,0 +1,94 @@
+.contacts-page {
+	padding-bottom: 100px;
+	&__wrapper {
+		.wrapper();
+		padding-top: 30px;
+		h2 {
+			.header();
+			text-align: left;
+		}
+	}
+	&__info {
+		margin-bottom: 55px;
+	}
+	&__adress {
+		width: 24%;
+		display: inline-block;
+		margin-right: 1%;
+		p {
+			font-size: 13px;
+			line-height: 21px;
+			color: #595959;
+		}
+	}
+	&__tel {
+		width: 24%;
+		display: inline-block;
+		margin-right: 1%;
+		p {
+			font-size: 13px;
+			line-height: 21px;
+			color: #595959;
+		}
+		a {
+			font-family: "RubikBold", sans-serif;
+			font-size: 16px;
+		}
+	}
+	&__mail {
+		width: 24%;
+		display: inline-block;
+		margin-right: 1%;
+		p {
+			font-size: 13px;
+			line-height: 21px;
+			color: #595959;
+		}
+		a {
+			font-family: "RubikMedium", sans-serif;
+			font-size: 16px;
+			color: @yellow;
+		}
+	}
+	&__map {
+		.wrapper();
+	}
+}
+
+#map {
+	width: 970px;
+	height: 400px;
+}
+
+@media screen and (max-width: 1279px) {
+	.contacts-page {
+		&__adress {
+			width: 37%;
+		}
+	}
+	#map {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.contacts-page {
+		&__wrapper {
+			h2 {
+				text-align: center;
+			}
+		}
+		&__adress,
+		&__tel,
+		&__mail {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__map {
+			width: 100%;
+			max-width: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

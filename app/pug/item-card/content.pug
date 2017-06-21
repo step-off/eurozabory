@@ -12,21 +12,23 @@ section.item-card
 			.item-card__details
 				.item-card__details-size
 					h3 Типоразмеры
-					p.item-card__size-height
-						|Высота(мм):
-						span 1500
-						span 1700
-						span 2000
-						span 2200
-						span 2400
-						span 3000
-					p.item-card__size-width
-						|Ширина(мм):
-						span 800
-						span 1000
-						span 1200
-						span 1500
-						span 2000
+					p
+						span.item-card__details-size-title Высота(мм):
+						span.item-card__details-size-group
+							span 1500
+							span 1700
+							span 2000
+							span 2200
+							span 2400
+							span 3000
+					p
+						span.item-card__details-size-title Ширина(мм):
+						span.item-card__details-size-group
+							span 800
+							span 1000
+							span 1200
+							span 1500
+							span 2000
 					a(href="#").item-card__order-btn Заказать
 				.item-card__details-accordion(data-accordion)
 					h3 Состав комплекта
@@ -36,4 +38,11 @@ section.item-card
 					h3 Гарантия
 					p Секции и столбы покрашены полимерным способом в один из стандартных цветов по RAL: 6005 (зеленый), 5010 (синий), 7040 (серый), 9016 (белый), 9005 (черный), 8017 (коричневый), 2004 (оранжевый). Покраска в другие цвета по RAL рассматривается по письменному запросу. Возможна наценка.
 	include ../components/recent-view
+		block recentHeader
+			h2 Недавно просмотренные
+		block recentItems
+			+recentItem("Калитка кованная главзабор")
+			+recentItem("Калитки капитальные (тип 701) для кованных ограждений")
+			+recentItem("Калитки капитальные (тип 711) для кованных ограждений")
+			+recentItem("Калитки капитальные (тип 721) для кованных ограждений")
 

@@ -95,7 +95,9 @@ $(document).ready(function () {
 	});
 	var accordionWrapper = $("[data-accordion]");
 	accordionWrapper.accordion({
-		collapsible: true
+		collapsible: true,
+		heightStyle: "content",
+		active: 0
 	});
 
 	var Gallery = function Gallery(mainItem, galleryList, galleryImages) {
@@ -184,7 +186,7 @@ $(document).ready(function () {
 		this._createSources();
 		this._toggleSmallImage();
 		//this._toggleMainImage();
-		this._offEventsOnMobiles();
+		//this._offEventsOnMobiles();
 	};
 	new Gallery("item-card__main-photo img", "item-card__small-photos", "item-card__small-photos img").init();
 });

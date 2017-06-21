@@ -56,7 +56,16 @@
 				color: #8e8e8e;
 				font-size: 13px;
 				line-height: 21px;
+			}
+			&-title {
+				font: inherit;
+			}
+			&-group {
+				display: inline-block;
 				span {
+					//font: inherit;
+					font-size: 13px;
+					line-height: 21px;
 					position: relative;
 					padding-right: 18px;
 					&:first-child {
@@ -65,12 +74,11 @@
 					&:not(:last-child) {
 						margin-right: 8px;
 						&::after {
-						content: "/";
-						position: absolute;
-						right: 0;
+							content: "/";
+							position: absolute;
+							right: 0;
+						}
 					}
-					}
-					
 				}
 			}
 		}
@@ -137,6 +145,9 @@
 		}
 		&__details {
 			width: 100%;
+			&-accordion {
+				margin-bottom: 50px;
+			}
 		}
 		&__main-photo {
 			width: 100%;
@@ -156,4 +167,33 @@
 		}
 	}
 	
+}
+
+@media screen and (max-width: 767px) {
+	.item-card {
+		&__desc {
+			h2 {
+				text-align: center;
+			}
+		}
+		&__details {
+			&-size {
+				p {
+					margin-top: 15px;
+				}
+				&-group {
+					display: block;
+					span {
+						padding-right: 10px;
+						&:first-child {
+							margin-left: 0;
+						}
+						&:not(:last-child) {
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

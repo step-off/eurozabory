@@ -1,0 +1,21 @@
+.works-page {
+	padding-top: 30px;
+	padding-bottom: 100px;
+	&__wrapper {
+		.wrapper();
+		h2 {
+			.header();
+			text-align: left;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.works-page {
+		&__wrapper {
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+}
